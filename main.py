@@ -1,40 +1,41 @@
 """Модуль создания персонажа для RPG игры."""
 from random import randint
+
 from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str):
     """Функция атаки."""
     if char_class == 'warrior':
-        return (f'{char_name} нанёс урон противнику равный'
-                f'{5 + randint(3, 5)}')
-    if char_class == 'mage':
-        return (f'{char_name} нанёс урон противнику равный'
-                f'{5 + randint(5, 10)}')
-    if char_class == 'healer':
-        return (f'{char_name} нанёс урон противнику равный'
-                f'{5 + randint(-3, -1)}')
+        print(f'{char_name} нанёс урон противнику равный'
+              f'{5 + randint(3, 5)}')
+    elif char_class == 'mage':
+        print(f'{char_name} нанёс урон противнику равный'
+              f'{5 + randint(5, 10)}')
+    elif char_class == 'healer':
+        print(f'{char_name} нанёс урон противнику равный'
+              f'{5 + randint(-3, -1)}')
 
 
 def defence(char_name: str, char_class: str):
     """Функция защиты."""
     if char_class == 'warrior':
-        return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
-    if char_class == 'mage':
-        return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
-    if char_class == 'healer':
-        return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
+        print(f'{char_name} блокировал {10 + randint(5, 10)} урона')
+    elif char_class == 'mage':
+        print(f'{char_name} блокировал {10 + randint(-2, 2)} урона')
+    elif char_class == 'healer':
+        print(f'{char_name} блокировал {10 + randint(2, 5)} урона')
 
 
 def special(char_name: str, char_class: str):
     """Функция применения особых умений."""
     if char_class == 'warrior':
-        return (f'{char_name} применил умение'
-                f'«Выносливость {80 + 25}»')
-    if char_class == 'mage':
-        return (f'{char_name} применил умение «Атака {5 + 40}»')
-    if char_class == 'healer':
-        return (f'{char_name} применил умение «Защита {10 + 30}»')
+        print(f'{char_name} применил умение'
+              f'«Выносливость {80 + 25}»')
+    elif char_class == 'mage':
+        print(f'{char_name} применил умение «Атака {5 + 40}»')
+    elif char_class == 'healer':
+        print(f'{char_name} применил умение «Защита {10 + 30}»')
 
 
 def start_training(char_name: str, char_class: str):
